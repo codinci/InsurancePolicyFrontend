@@ -1,8 +1,29 @@
+<div class="row bg-secondary text-center py-5 rounded-2">
+	<h1>Policy Register</h1>
+</div>
 <div class="row mt-5">
 	<div class="col-6">
 		<app-policies-form />
 	</div>
 	<div class="col-6">
-		<p>list payment details</p>
+		<ul class="list-group">
+			@if(service.policyList.length === 0){
+				<li class="list-group-item text-center">
+					No policies found.
+				</li>
+			}
+			@for(policy of service.policyList; track policy){
+				<li class="list-group d-flex justify-content-between align-items-start mb-2 border px-4 py-3 rounded-3">
+					<div class="flex-grow-1 mouse-hover">
+						<div class="fw-bold">{{policy.policyName}}</div>
+						<div >{{policy.policyDescription}}</div>
+					</div>
+					<span class="text-secondary">
+						<i class="fa fa-trash fa-lg mouse-hover" aria-hidden="true"></i>
+					</span>
+
+				</li>
+			}
+		</ul>
 	</div>
 </div>
