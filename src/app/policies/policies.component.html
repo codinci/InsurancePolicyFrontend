@@ -12,16 +12,15 @@
 					No policies found.
 				</li>
 			}
-			@for(policy of service.policyList; track policy){
+			@for(policy of service.policyList; track policy.policyId){
 				<li class="list-group d-flex justify-content-between align-items-start mb-2 border px-4 py-3 rounded-3">
-					<div class="flex-grow-1 mouse-hover">
+					<div class="flex-grow-1 mouse-hover" (click)="populateForm(policy)">
 						<div class="fw-bold">{{policy.policyName}}</div>
 						<div >{{policy.policyDescription}}</div>
 					</div>
 					<span class="text-secondary">
-						<i class="fa fa-trash fa-lg mouse-hover" aria-hidden="true"></i>
+						<i class="fa fa-trash fa-lg mouse-hover" aria-hidden="true" (click)="onDelete(policy.policyId)"></i>
 					</span>
-
 				</li>
 			}
 		</ul>

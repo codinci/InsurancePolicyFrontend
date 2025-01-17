@@ -1,11 +1,12 @@
-<form #form="ngForm" (submit)="onSubmit(form)">
+<form #form="ngForm" (submit)="onSubmit(form)" [class.submitted] = "service.formSubmitted" novalidate autocomplete="off">
 	<input type="hidden" name="policyId" value="service.formData.policyId">
 	<div class="mb-3">
 		<label>Policy Name</label>
 		<input class="form-control form-control-lg"
 		placeholder="Policy name"
 		#policyName="ngModel" name="policyName"
-		[(ngModel)] ="service.formData.policyName">
+		[(ngModel)] ="service.formData.policyName"
+		required>
 	</div>
 	<div class="mb-3">
 		<label>Policy Description</label>
