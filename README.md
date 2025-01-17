@@ -1,59 +1,42 @@
-# InsurancePolicyFrontend
+# Angular CRUD Application with C# API Integration
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+This is an Angular application that performs CRUD (Create, Read, Update, Delete) operations by interacting with an API built using C#. The application is designed to manage data efficiently with a responsive and user-friendly interface.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- **List Display**: Displays data fetched from the C# API in a structured and interactive manner.
+- **Create Functionality**: Allows users to add new records through a form.
+- **Update Functionality**: Enables users to edit existing records.
+- **Delete Functionality**: Provides an option to delete records.
+- **Real-Time Updates**: Automatically updates the list upon adding or editing records without requiring a full page reload.
 
-```bash
+## Prerequisites
+
+- **Node.js**: Ensure Node.js is installed on your system. [Download Node.js](https://nodejs.org/)
+- **Angular CLI**: Install the Angular CLI globally using the following command:
+```
+npm install -g @angular/cli
+```
+
+## Procedure
+
+- Clone the repository
+```
+git clone https://github.com/codinci/InsurancePolicyFrontend.git
+```
+- Navigate to the project folder
+```
+cd InsurancePolicyFrontend
+```
+- Install node packages
+```
+npm install
+```
+- Update the API base url to match your running backend url
+    - Open src/environments/environment.development.ts
+	- Set the apiBaseUrl to match your backend API url(e.g http://localhost:5072/api)
+- Start your Angular server
+```
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
