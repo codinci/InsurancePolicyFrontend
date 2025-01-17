@@ -1,1 +1,23 @@
-<p>policies-form works!</p>
+<form #form="ngForm" (submit)="onSubmit(form)">
+	<input type="hidden" name="policyId" value="service.formData.policyId">
+	<div class="mb-3">
+		<label>Policy Name</label>
+		<input class="form-control form-control-lg"
+		placeholder="Policy name"
+		#policyName="ngModel" name="policyName"
+		[(ngModel)] ="service.formData.policyName">
+	</div>
+	<div class="mb-3">
+		<label>Policy Description</label>
+		<input class="form-control form-control-lg"
+		placeholder="Policy Description"
+		#policyDescription="ngModel" name="policyDescription"
+		[(ngModel)] ="service.formData.policyDescription">
+	</div>
+	<div class="d-grid">
+		<button class="btn btn-lg btn-success"
+		type="submit">
+			Submit
+		</button>
+	</div>
+</form>
